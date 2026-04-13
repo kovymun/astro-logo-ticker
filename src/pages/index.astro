@@ -1,16 +1,155 @@
 ---
-
+import { Font } from "astro:assets";
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Logo Ticker Project Scaffold</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Infinite logo ticker component for Astro.js"
+    />
+    <title>Logo Ticker · Astro Component</title>
+    <Font
+      cssVariable="--font-serif"
+      preload={[
+        { weight: 400, subset: "latin", style: "normal" },
+        { weight: 400, subset: "latin", style: "italic" },
+      ]}
+    />
+
+    <!-- Body font: weight 400 used for hero subtitle and base text -->
+    <Font
+      cssVariable="--font-sans"
+      preload={[{ weight: 400, subset: "latin", style: "normal" }]}
+    />
+
+    <!-- Mono font: weight 500 used in pill label above the fold -->
+    <Font
+      cssVariable="--font-mono"
+      preload={[{ weight: 500, subset: "latin", style: "normal" }]}
+    />
   </head>
+
   <body>
-    <h1>Astro</h1>
+    <!-- Grid background -->
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <main>
+      <!-- Hero -->
+      <header class="hero">
+        <div class="hero-pill">
+          <span class="pill">Astro Component</span>
+        </div>
+        <h1 class="hero-title">
+          Logo<br /><em>Ticker</em>
+        </h1>
+        <p class="hero-subtitle">
+          An infinite, accessible marquee carousel for social proof.
+        </p>
+      </header>
+    </main>
   </body>
 </html>
+
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --bg: #080808;
+    --border: rgba(255 255 255 / 0.07);
+    --text-primary: #f0ede8;
+    --text-secondary: rgba(240 237 232 / 0.45);
+    --font-serif: "Instrument Serif", Georgia, serif;
+    --font-sans: "Geist", system-ui, sans-serif;
+    --font-mono: "DM Mono", "Courier New", monospace;
+  }
+
+  html {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Grid background */
+  .bg-grid {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(255 255 255 / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255 255 255 / 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 7rem 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .hero-pill {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .pill {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    padding: 0.2em 0.75em;
+    background: rgba(255 255 255 / 0.03);
+  }
+
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3.5rem, 9vw, 6.5rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: rgba(240 237 232 / 0.4);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 42ch;
+  }
+</style>
