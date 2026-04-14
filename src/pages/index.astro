@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import LogoTicker from "../components/LogoTicker.astro";
 ---
 
 <!doctype html>
@@ -34,9 +35,6 @@ import { Font } from "astro:assets";
   </head>
 
   <body>
-    <!-- Grid background -->
-    <div class="bg-grid" aria-hidden="true"></div>
-
     <main>
       <!-- Hero -->
       <header class="hero">
@@ -50,6 +48,13 @@ import { Font } from "astro:assets";
           An infinite, accessible marquee carousel for social proof.
         </p>
       </header>
+
+      <div class="divider"></div>
+
+      <!-- Scroll left from right -->
+      <section class="demo-container">
+        <LogoTicker label="Trusted by engineering teams at" />
+      </section>
     </main>
   </body>
 </html>
@@ -84,18 +89,6 @@ import { Font } from "astro:assets";
     min-height: 100dvh;
     position: relative;
     overflow-x: hidden;
-  }
-
-  /* Grid background */
-  .bg-grid {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    background-image:
-      linear-gradient(rgba(255 255 255 / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255 255 255 / 0.03) 1px, transparent 1px);
-    background-size: 48px 48px;
-    pointer-events: none;
   }
 
   main {
@@ -151,5 +144,20 @@ import { Font } from "astro:assets";
     line-height: 1.7;
     color: var(--text-secondary);
     max-width: 42ch;
+  }
+
+  /* Demo Block */
+  .demo-container {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(255 255 255 / 0.015);
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .divider {
+    height: 5px;
+    background: var(--border);
+    margin: 1rem 0;
   }
 </style>
