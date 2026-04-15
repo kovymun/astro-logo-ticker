@@ -12,6 +12,7 @@
   - [Installation](#installation)
 - [Tech Stack](#tech-stack)
 - [Features](#features)
+- [Disclaimer](#disclaimer)
 - [License](#license)
 - [Contact](#contact)
 
@@ -20,6 +21,8 @@
 ### Preview
 
 ## <img width="1872" height="753" alt="image of logo infinite carousel" src="https://github.com/user-attachments/assets/ec0ea4b7-d534-4c0a-85d2-3497f5582d29" />
+
+---
 
 ### Getting Started
 
@@ -41,13 +44,22 @@
 
 ### Tech stack
 
-![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat&logo=astro&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) ![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Fontsource](https://img.shields.io/badge/Fontsource-000000?style=flat&logo=fontsource&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat&logo=astro&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) ![Fontsource](https://img.shields.io/badge/Fontsource-000000?style=flat&logo=fontsource&logoColor=white)
 
 ---
 
 ### Features
 
-** To be added **
+1. **Pure Astro**: no frameworks like React, Vue.
+2. **Zero JS animation**: the scroll is 100% CSS.
+3. **Pause on hover**: optional, toggled via prop
+4. **TypeScript**: fully typed props
+
+---
+
+### Disclaimer
+
+The SVG logos used in this project are AI generated representations and are not official brand assets. They are intended for demo purposes only.
 
 ---
 
