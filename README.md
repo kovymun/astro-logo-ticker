@@ -19,12 +19,7 @@
 
 ### Preview
 
-<div align="center">
-  <img src="./public/assets/Astro_Logo_Ticker.gif" alt="Astro.js Infinite Logo Ticker with fade masks" width="800">
-  <p><i>Infinite auto-scrolling with CSS edge fade masks.</i></p>
-</div>
-
----
+## <img width="1872" height="753" alt="image of logo infinite carousel" src="https://github.com/user-attachments/assets/ec0ea4b7-d534-4c0a-85d2-3497f5582d29" />
 
 ### Getting Started
 
